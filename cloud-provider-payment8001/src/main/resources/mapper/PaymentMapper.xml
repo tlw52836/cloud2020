@@ -8,8 +8,8 @@
     </insert>
 
     <resultMap id="BaseResultMap" type="com.tlw.springcloud.entities.Payment">
-        <id property="id" column="id"/>
-        <result property="serial" column="serial"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="serial" column="serial" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="getPaymentById" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select id, serial from payment where id = #{id}
